@@ -1,0 +1,3 @@
+[submodule "upstream/mapshot"]
+	path = upstream/mapshot
+	url = git@github.com:Palats/mapshot.git
