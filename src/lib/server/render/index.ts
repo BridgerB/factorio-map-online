@@ -14,11 +14,7 @@ export type { RenderParams } from './overrides.js';
 
 const MOD_SOURCE = path.resolve('upstream/mapshot/mod');
 
-const tryUnlink = (filePath: string) => {
-	try {
-		fs.unlinkSync(filePath);
-	} catch {}
-};
+const tryUnlink = (filePath: string) => fs.rmSync(filePath, { force: true });
 
 function copyModFiles(dstMapshot: string): void {
 	fs.mkdirSync(dstMapshot, { recursive: true });
